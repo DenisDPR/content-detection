@@ -1,1 +1,1 @@
-# content-detectcion
+# Content Detectcion Library
