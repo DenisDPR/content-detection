@@ -1,0 +1,3 @@
+include ':contentdetectionlibrary'
+include ':app'
+rootProject.name = "ContentDetection"
