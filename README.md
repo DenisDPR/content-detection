@@ -16,7 +16,8 @@ Add it in your root build.gradle at the end of repositories
 	implementation 'com.github.shebogholo:content-detection:0.0.1'
   }
 ```
-### Step 3: To use the library
+### Step 3: To use prediction method
+It accepts two arguments: (Context, text)
 ```
    DetectContent.detect(MainActivity.this, "मुझे उस से नफरत है");
 ```
