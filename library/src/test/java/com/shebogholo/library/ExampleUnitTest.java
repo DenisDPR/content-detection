@@ -1,4 +1,4 @@
-package com.contentdetection;
+package com.shebogholo.library;
 
 import org.junit.Test;
 

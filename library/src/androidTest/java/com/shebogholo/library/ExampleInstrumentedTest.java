@@ -1,4 +1,4 @@
-package com.contentdetection;
+package com.shebogholo.library;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.contentdetection.test", appContext.getPackageName());
+        assertEquals("com.shebogholo.library.test", appContext.getPackageName());
     }
 }
