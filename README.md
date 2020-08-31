@@ -7,11 +7,11 @@
 			...
 			maven { url 'https://jitpack.io' }
 		}
-	}
+}
 ```
 ### Step 2: Add the dependency
 ```
   dependencies {
 	        implementation 'com.github.shebogholo:content-detection:0.0.1'
-	}
+}
 ```
