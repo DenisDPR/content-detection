@@ -16,3 +16,7 @@ Add it in your root build.gradle at the end of repositories
 	implementation 'com.github.shebogholo:content-detection:0.0.1'
   }
 ```
+### Step 3: To use the library
+```
+   DetectContent.detect(MainActivity.this, "मुझे उस से नफरत है");
+```
