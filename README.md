@@ -13,7 +13,7 @@ Add it in your root build.gradle at the end of repositories
 ### Step 2: Add the dependency
 ```
   dependencies {
-	implementation 'com.github.shebogholo:content-detection:0.0.1'
+	implementation 'com.github.shebogholo:content-detection:0.0.2'
   }
 ```
 ### Step 3: To use prediction method
