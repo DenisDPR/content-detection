@@ -38,6 +38,8 @@ public class DetectContent {
         List<DetectContent.TextClassificationClient.Result> results = textClassificationClient.classify(text);
         DetectContent.TextClassificationClient.Result result = results.get(0);
         Toast.makeText(context, ""+result.getTitle(), Toast.LENGTH_LONG).show();
+        textClassificationClient.unload();
+        // What to return
     }
 
     static class TextClassificationClient {
