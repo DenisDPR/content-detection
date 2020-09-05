@@ -30,16 +30,11 @@ import java.util.PriorityQueue;
 
 
 public class DetectContent {
-    private Context context;
-    private static TextClassificationClient textClassificationClient;
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public DetectContent() {
-        textClassificationClient = new TextClassificationClient(context);
-        textClassificationClient.load();
-    }
-
     //    Detect text aggressiveness using machine learning model
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public static void detect(Context context, String text){
+        TextClassificationClient textClassificationClient = new TextClassificationClient(context);
+        textClassificationClient.load();
         List<DetectContent.TextClassificationClient.Result> results = textClassificationClient.classify(text);
         DetectContent.TextClassificationClient.Result result = results.get(0);
         Toast.makeText(context, ""+result.getTitle(), Toast.LENGTH_LONG).show();
