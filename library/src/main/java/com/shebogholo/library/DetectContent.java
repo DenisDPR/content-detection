@@ -32,14 +32,17 @@ import java.util.PriorityQueue;
 public class DetectContent {
     //    Detect text aggressiveness using machine learning model
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public static void detect(Context context, String text){
+    public static String detect(Context context, String text){
         TextClassificationClient textClassificationClient = new TextClassificationClient(context);
         textClassificationClient.load();
         List<DetectContent.TextClassificationClient.Result> results = textClassificationClient.classify(text);
-        DetectContent.TextClassificationClient.Result result = results.get(0);
-        Toast.makeText(context, ""+result.getTitle(), Toast.LENGTH_LONG).show();
+        DetectContent.TextClassificationClient.Result result = results.get(1);
         textClassificationClient.unload();
-        // What to return
+        if (result.confidence > 0.40){
+            return "unsuccessful";
+        }else{
+            return text;
+        }
     }
 
     static class TextClassificationClient {
