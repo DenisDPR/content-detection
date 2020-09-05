@@ -37,9 +37,9 @@ public class DetectContent {
         textClassificationClient.load();
         List<DetectContent.TextClassificationClient.Result> results = textClassificationClient.classify(text);
         DetectContent.TextClassificationClient.Result result = results.get(1);
-        System.out.println(result.getConfidence());
+        System.out.println(result.confidence);
         textClassificationClient.unload();
-        if (result.getConfidence() > 0.50){
+        if (result.confidence > 0.40){
             return "unsuccessful";
         }else{
             return text;
